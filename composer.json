@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Dabble\\": "src"
+            "Monolyth\\Dabble\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Dabble\\Test\\": "tests"
+            "Monolyth\\Dabble\\Test\\": "tests"
         }
     }
 }
