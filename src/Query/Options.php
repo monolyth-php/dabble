@@ -3,13 +3,13 @@
 /**
  * Object for generating query options.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @subpackage Query;
  * @author Marijn Ophorst <marijn@monomelodies.nl>
  * @copyright MonoMelodies 2015
  */
 
-namespace Dabble\Query;
+namespace Monolyth\Dabble\Query;
 
 class Options implements Bindable
 {

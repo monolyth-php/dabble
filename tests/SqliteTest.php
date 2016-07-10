@@ -1,8 +1,8 @@
 <?php
 
-namespace Dabble\Test;
+namespace Monolyth\Dabble\Test;
 
-use Dabble\Adapter\Sqlite;
+use Monolyth\Dabble\Adapter\Sqlite;
 
 /**
  * Tests for SQLite

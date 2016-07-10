@@ -3,12 +3,12 @@
 /**
  * Base Exception that other Dabble-exceptions should extend.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @author Marijn Ophorst <marijn@monomelodies.nl>
- * @copyright MonoMelodies 2010, 2015
+ * @copyright MonoMelodies 2010, 2015, 2016
  */
 
-namespace Dabble;
+namespace Monolyth\Dabble;
 
 /**
  * This is just a stub and shouldn't get thrown.

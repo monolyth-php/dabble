@@ -1,6 +1,6 @@
 <?php
 
-namespace Dabble\Query;
+namespace Monolyth\Dabble\Query;
 
 interface Bindable
 {

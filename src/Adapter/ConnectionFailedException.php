@@ -1,8 +1,8 @@
 <?php
 
-namespace Dabble\Adapter;
+namespace Monolyth\Dabble\Adapter;
 
-use Dabble\Exception;
+use Monolyth\Dabble\Exception;
 
 class ConnectionFailedException extends Exception
 {

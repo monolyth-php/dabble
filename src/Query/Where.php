@@ -3,15 +3,15 @@
 /**
  * Object for generating the WHERE part of a query.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @subpackage Query
  * @author Marijn Ophorst <marijn@monomelodies.nl>
- * @copyright MonoMelodies 2015
+ * @copyright MonoMelodies 2015, 2016
  */
 
-namespace Dabble\Query;
+namespace Monolyth\Dabble\Query;
 
-use Dabble\Query;
+use Monolyth\Dabble\Query;
 
 class Where implements Bindable
 {

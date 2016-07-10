@@ -1,8 +1,8 @@
 <?php
 
-namespace Dabble\Test;
+namespace Monolyth\Dabble\Test;
 
-use Dabble\Adapter\Mysql;
+use Monolyth\Dabble\Adapter\Mysql;
 
 /**
  * Tests for MySQL

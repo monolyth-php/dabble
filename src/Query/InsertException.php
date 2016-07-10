@@ -1,11 +1,11 @@
 <?php
 
 /**
- * @package Dabble
+ * @package Monolyth\Dabble
  * @subpackage Query
  */
 
-namespace Dabble\Query;
+namespace Monolyth\Dabble\Query;
 
 class InsertException extends Exception
 {

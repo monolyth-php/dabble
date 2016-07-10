@@ -3,23 +3,23 @@
 /**
  * A generic class all database classes involving SQL should extend.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @author Marijn Ophorst <marijn@monomelodies.nl>
  * @copyright MonoMelodies 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016
  */
 
-namespace Dabble;
+namespace Monolyth\Dabble;
 
-use Dabble\Query\Where;
-use Dabble\Query\Options;
-use Dabble\Query\Select;
-use Dabble\Query\Insert;
-use Dabble\Query\Update;
-use Dabble\Query\Delete;
-use Dabble\Query\Count;
-use Dabble\Query\SelectException;
-use Dabble\Query\Raw;
-use Dabble\Query\Normalize;
+use Monolyth\Dabble\Query\Where;
+use Monolyth\Dabble\Query\Options;
+use Monolyth\Dabble\Query\Select;
+use Monolyth\Dabble\Query\Insert;
+use Monolyth\Dabble\Query\Update;
+use Monolyth\Dabble\Query\Delete;
+use Monolyth\Dabble\Query\Count;
+use Monolyth\Dabble\Query\SelectException;
+use Monolyth\Dabble\Query\Raw;
+use Monolyth\Dabble\Query\Normalize;
 use PDO;
 use PDOException;
 use PDOStatement;
@@ -74,7 +74,7 @@ abstract class Adapter extends PDO
      * This allows you to define as many databases as you want in a central file
      * without necessarily worrying about overhead (e.g. lots of related sites).
      *
-     * @throws Dabble\Adapter\ConnectionFailedException if the database is
+     * @throws Monolyth\Dabble\Adapter\ConnectionFailedException if the database is
      *  unavailable.
      */
     public function connect()
@@ -99,7 +99,7 @@ abstract class Adapter extends PDO
 
     /**
      * Expose all PDO's original methods, optionally with additional
-     * Dabble-specific functionality.
+     * Monolyth\Dabble-specific functionality.
      *
      * {{{
      */
@@ -207,8 +207,8 @@ abstract class Adapter extends PDO
      * @param mixed $where The where-clause.
      * @param mixed $options The options (limit, offset etc.).
      * @return function A lambda allowing you to access the found rows.
-     * @throws Dabble\Query\SelectException when no rows found.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\SelectException when no rows found.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
     public function select($table, $fields, $where = [], $options = [])
     {
@@ -233,8 +233,8 @@ abstract class Adapter extends PDO
      * @param mixed $where The where-clause.
      * @param mixed $options The options (limit, offset etc.).
      * @return array Array containing all found rows.
-     * @throws Dabble\Query\SelectException when no rows found.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\SelectException when no rows found.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
     public function fetchAll($table, $fields, $where = [], $options = [])
     {
@@ -266,8 +266,8 @@ abstract class Adapter extends PDO
      * @param array $where An SQL where-array.
      * @param array $options Array of options.
      * @return array An array containing the result.
-     * @throws Dabble\Query\SelectException when no row was found.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\SelectException when no row was found.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
     public function fetch($table, $fields, $where = null, $options = [])
     {
@@ -289,8 +289,8 @@ abstract class Adapter extends PDO
      * @param array $where An SQL where-array.
      * @param array $options Array of options.
      * @return mixed A scalar containing the result, or null.
-     * @throws Dabble\Query\SelectException when no row was found.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\SelectException when no row was found.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
     public function column($table, $field, $where = null, $options = null)
     {
@@ -299,7 +299,7 @@ abstract class Adapter extends PDO
     }
 
     /**
-     * Alias for Dabble\Adapter::column for consistency with PDO.
+     * Alias for Monolyth\Dabble\Adapter::column for consistency with PDO.
      */
     public function fetchColumn($table, $field, $where = null, $options = null)
     {
@@ -317,8 +317,8 @@ abstract class Adapter extends PDO
      * @param array $options Array of options.
      * @return mixed An object of the desired class initialized with the row's
      *  values.
-     * @throws Dabble\Query\SelectException when no row was found.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\SelectException when no row was found.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
 
     public function fetchObject(
@@ -359,7 +359,7 @@ abstract class Adapter extends PDO
      * @param string $table The table(s) to query.
      * @param array $where An SQL where-array.
      * @return integer The number of matched rows.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
     public function count($table, $where = null)
     {
@@ -386,8 +386,8 @@ abstract class Adapter extends PDO
      * @param array $fields Array Field => value pairs to update.
      * @param array $where Array of where statements to limit updates.
      * @return integer The number of affected (updated) rows.
-     * @throws Dabble\Query\UpdateException if no rows were updated.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\UpdateException if no rows were updated.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
     public function update($table, array $fields, $where, $options = null)
     {
@@ -407,8 +407,8 @@ abstract class Adapter extends PDO
      * @param string $table The table to delete from.
      * @param array $where Array of where statements to limit deletes.
      * @return int The number of deleted rows.
-     * @throws Dabble\Query\DeleteException if no rows were deleted.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\DeleteException if no rows were deleted.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
     public function delete($table, array $where)
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Dabble\Test;
+namespace Monolyth\Dabble\Test;
 
-use Dabble\Adapter\Postgresql;
+use Monolyth\Dabble\Adapter\Postgresql;
 
 /**
  * Tests for PostgreSQL

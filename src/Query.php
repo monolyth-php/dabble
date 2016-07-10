@@ -1,10 +1,10 @@
 <?php
 
-namespace Dabble;
+namespace Monolyth\Dabble;
 
-use Dabble\Query\Bindable;
-use Dabble\Query\Value;
-use Dabble\Query\SqlException;
+use Monolyth\Dabble\Query\Bindable;
+use Monolyth\Dabble\Query\Value;
+use Monolyth\Dabble\Query\SqlException;
 use PDOException;
 
 abstract class Query implements Bindable

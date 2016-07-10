@@ -3,16 +3,16 @@
 /**
  * Class for generating INSERT queries.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @subpackage Query;
  * @author Marijn Ophorst <marijn@monomelodies.nl>
  * @copyright MonoMelodies 2015, 2016
  */
 
-namespace Dabble\Query;
+namespace Monolyth\Dabble\Query;
 
-use Dabble\Adapter;
-use Dabble\Query;
+use Monolyth\Dabble\Adapter;
+use Monolyth\Dabble\Query;
 
 class Insert extends Query
 {
@@ -21,12 +21,12 @@ class Insert extends Query
     /**
      * Insert a row into the database.
      *
-     * @param Dabble\Adapter $adapter The adapter to use.
+     * @param Monolyth\Dabble\Adapter $adapter The adapter to use.
      * @param string $table The table to insert into.
      * @param array $fields Array of Field => value pairs to insert.
      * @return mixed The last inserted serial, or 0 or true if none found.
-     * @throws Dabble\Query\InsertException if no rows were inserted.
-     * @throws Dabble\Query\SqlException on error.
+     * @throws Monolyth\Dabble\Query\InsertException if no rows were inserted.
+     * @throws Monolyth\Dabble\Query\SqlException on error.
      */
     public function __construct(Adapter $adapter, $table, array $fields)
     {

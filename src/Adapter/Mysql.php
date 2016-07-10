@@ -3,15 +3,15 @@
 /**
  * Database abstraction layer for MySQL.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @subpackage Adapter
  * @author Marijn Ophorst <marijn@monomelodies.nl>
  * @copyright MonoMelodies 2008, 2009, 2010, 2011, 2012, 2015
  */
 
-namespace Dabble\Adapter;
+namespace Monolyth\Dabble\Adapter;
 
-use Dabble\Adapter;
+use Monolyth\Dabble\Adapter;
 
 /** MySQL-abstraction class. */
 class Mysql extends Adapter

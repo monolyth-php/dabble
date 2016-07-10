@@ -3,16 +3,16 @@
 /**
  * Class for generating SELECT queries.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @subpackage Query;
  * @author Marijn Ophorst <marijn@monomelodies.nl>
  * @copyright MonoMelodies 2015, 2016
  */
 
-namespace Dabble\Query;
+namespace Monolyth\Dabble\Query;
 
-use Dabble\Query;
-use Dabble\Adapter;
+use Monolyth\Dabble\Query;
+use Monolyth\Dabble\Adapter;
 use PDO;
 use PDOException;
 use PDOStatement;

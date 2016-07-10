@@ -3,15 +3,15 @@
 /**
  * Class for generating UPDATE queries.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @author Marijn Ophorst <marijn@monomelodies.nl>
  * @copyright MonoMelodies 2015, 2016
  */
 
-namespace Dabble\Query;
+namespace Monolyth\Dabble\Query;
 
-use Dabble\Adapter;
-use Dabble\Query;
+use Monolyth\Dabble\Adapter;
+use Monolyth\Dabble\Query;
 
 class Update extends Query
 {

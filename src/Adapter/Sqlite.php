@@ -3,16 +3,16 @@
 /**
  * Database abstraction layer for SqLite.
  *
- * @package Dabble
+ * @package Monolyth\Dabble
  * @subpackage Adapter
  * @author Marijn Ophorst <marijn@monomelodies.nl>
  * @copyright MonoMelodies 2015
  */
 
-namespace Dabble\Adapter;
+namespace Monolyth\Dabble\Adapter;
 
-use Dabble\Adapter;
-use Dabble\Query\Raw;
+use Monolyth\Dabble\Adapter;
+use Monolyth\Dabble\Query\Raw;
 
 /** SqLite-abstraction class. */
 class Sqlite extends Adapter

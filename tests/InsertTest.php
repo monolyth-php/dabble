@@ -1,9 +1,9 @@
 <?php
 
-namespace Dabble\Test;
+namespace Monolyth\Dabble\Test;
 
-use Dabble\Adapter;
-use Dabble\Query\InsertException;
+use Monolyth\Dabble\Adapter;
+use Monolyth\Dabble\Query\InsertException;
 
 /**
  * Insertions
