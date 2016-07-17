@@ -11,12 +11,12 @@ existing code seamlessly.
 
 ### Using Composer (recommended)
 ```bash
-composer install --save monomelodies/dabble
+composer install --save monolyth/dabble
 ```
 
 ### Manual
 Download or clone the library. Register the `/path/to/dabble/src` for the
-namespace prefix `Dabble` in your autoloader.
+namespace prefix `Monolyth\Dabble` in your autoloader.
 
 ## Setting up a connection
 Instantiate a Dabble database object using your credentials:
@@ -24,7 +24,7 @@ Instantiate a Dabble database object using your credentials:
 ```php
 <?php
     
-use Dabble\Adapter\Mysql;
+use Monolyth\Dabble\Adapter\Mysql;
 
 $db = new Mysql($dsn, $user, $pass, $options);
 
