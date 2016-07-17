@@ -11,21 +11,27 @@ use Monolyth\Dabble\Query\DeleteException;
 trait DeleteTest
 {
     /**
-     * {0}::delete should delete a row
+     * delete should delete a row {?}
      */
-    public function testDelete(Adapter &$db = null, $table = 'test', $where = ['id' => 1])
+    public function testDelete(Adapter &$db = null)
     {
         $db = $this->db;
-        yield 1;
+        $res = $db->delete('test', ['id' => 1]);
+        yield assert($res == 1);
     }
     
     /**
-     * {0}::delete should throw an exception if nothing was deleted
+     * delete should throw an exception if nothing was deleted {?}
      */
-    public function testNoDelete(Adapter &$db = null, $table = 'test', $where = ['id' => 12345])
+    public function testNoDelete(Adapter &$db = null)
     {
         $db = $this->db;
-        yield new DeleteException;
+        $e = null;
+        try {
+            $db->delete('test', ['id' => 12345]);
+        } catch (DeleteException $e) {
+        }
+        yield assert($e instanceof DeleteException);
     }
 }
 
