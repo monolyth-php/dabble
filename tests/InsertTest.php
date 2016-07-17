@@ -11,21 +11,27 @@ use Monolyth\Dabble\Query\InsertException;
 trait InsertTest
 {
     /**
-     * {0}::insert should insert a new row
+     * insert should insert a new row {?}
      */
-    public function testInsert(Adapter &$db = null, $table = 'test', $values = ['name' => 'monomelodies'])
+    public function testInsert(Adapter &$db = null)
     {
         $db = $this->db;
-        yield 1;
+        $res = $db->insert('test', ['name' => 'monomelodies']);
+        yield assert($res == 1);
     }
 
     /**
-     * {0}::insert should throw an exception if nothing was inserted
+     * insert should throw an exception if nothing was inserted {?}
      */
-    public function testNoInsert(Adapter &$db = null, $table = 'test2', $values = ['test' => null])
+    public function testNoInsert(Adapter &$db = null)
     {
         $db = $this->db;
-        yield new InsertException;
+        $e = null;
+        try {
+            $db->insert('test2', ['test' => null]);
+        } catch (InsertException $e) {
+        }
+        yield assert($e instanceof InsertException);
     }
 }
 
